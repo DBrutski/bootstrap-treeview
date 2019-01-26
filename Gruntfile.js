@@ -57,6 +57,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   // register one or more task lists (you should ALWAYS have a "default" task list)
-  grunt.registerTask('default', ['uglify','cssmin', 'copy', 'qunit', 'watch']);
+  grunt.registerTask('default', ['uglify','cssmin', 'copy']);
+  grunt.registerTask('watch', ['uglify','cssmin', 'copy', 'qunit', 'watch']);
   grunt.registerTask('test', 'qunit');
 };
